@@ -5,20 +5,20 @@
 class Vreader < Formula
   desc "vreader"
   homepage "https://github.com/lll-lll-lll-lll/vreader"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.2/vreader_darwin_arm64.tar.gz"
-      sha256 "eb5ef5ed3f38fc99e38fcdb88ac3552a5cc0eeb06a2ad97f7b3855a07ad12dc6"
+    if Hardware::CPU.intel?
+      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.3/vreader_darwin_x86_64.tar.gz"
+      sha256 "7a34d234f70a6712b7974c0176aef197b07b012475fde635d70a6f4f05e67593"
 
       def install
         bin.install "vreader"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.2/vreader_darwin_x86_64.tar.gz"
-      sha256 "6033d96a541f2986155e0b6f8ad68e178843698af76fa554c2074f6249c8e736"
+    if Hardware::CPU.arm?
+      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.3/vreader_darwin_arm64.tar.gz"
+      sha256 "c343235fda1d47e29ac5b00b7ebe8a53cc199842fc4e7573fca798f4f780ae92"
 
       def install
         bin.install "vreader"
@@ -28,16 +28,16 @@ class Vreader < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.2/vreader_linux_x86_64.tar.gz"
-      sha256 "c6ab4941502b871f358c58756bc686a622e90322a4a2bc4033e25a3d45144bfe"
+      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.3/vreader_linux_x86_64.tar.gz"
+      sha256 "5ded98d45f1f7496f73623d50e6c382ae9c1785aadc145b821305970f4e0e48a"
 
       def install
         bin.install "vreader"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.2/vreader_linux_arm64.tar.gz"
-      sha256 "dcedc2123aa92e8ac84f503a073f5ca3ab9c0583c707195a7d0234a95ca48ab5"
+      url "https://github.com/lll-lll-lll-lll/webvtt-reader/releases/download/v0.1.3/vreader_linux_arm64.tar.gz"
+      sha256 "c985ca4d20f4c48b0f0d0780a20cb953ac23ae88175bbd4b3570184a118e0018"
 
       def install
         bin.install "vreader"
